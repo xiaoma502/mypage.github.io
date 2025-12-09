@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个 Homepage</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: radial-gradient(circle at 20% 20%, #f7d9ff, #d9e8ff 40%, #f5f5f5 75%);
+      --text: #1f2a44;
+      --accent: #4f8bff;
+      --accent-strong: #2d6bff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .card {
+      text-align: center;
+      padding: 48px 56px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(79, 139, 255, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(6px);
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-size: 16px;
+      color: #4b5563;
+      margin-bottom: 26px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(79, 139, 255, 0.35);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      text-decoration: none;
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(79, 139, 255, 0.4);
+    }
+    .cta:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 30px rgba(79, 139, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>这是我的第一个 homepage</h1>
+    <p>开启第二人生</p>
+    <a class="cta" href="whale.html" aria-label="开启第二人生，进入小鲸鱼页面">开启第二人生</a>
+  </main>
+</body>
+</html>
+
