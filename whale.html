@@ -62,31 +62,72 @@
   <div class="ocean"></div>
   <div class="wave"></div>
   <div class="info">移动鼠标，小鲸鱼会跟随你 🐳</div>
-  <svg class="whale" id="whale" viewBox="0 0 260 160" aria-label="可爱的鲸鱼" width="200" height="130">
+  <svg class="whale" id="whale" viewBox="0 0 320 200" aria-label="可爱的鲸鱼" width="220" height="150">
     <defs>
-      <linearGradient id="whaleBody" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#8bd5ff"/>
-        <stop offset="100%" stop-color="#4aa3ff"/>
+      <linearGradient id="whaleBody" x1="10%" y1="0%" x2="80%" y2="90%">
+        <stop offset="0%" stop-color="#b3e8ff"/>
+        <stop offset="45%" stop-color="#74c4ff"/>
+        <stop offset="100%" stop-color="#2d84f5"/>
       </linearGradient>
-      <linearGradient id="belly" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#e9f6ff"/>
-        <stop offset="100%" stop-color="#cde9ff"/>
+      <radialGradient id="bodyVolume" cx="38%" cy="32%" r="60%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+        <stop offset="70%" stop-color="#6fc7ff" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="belly" x1="0%" y1="0%" x2="100%" y2="30%">
+        <stop offset="0%" stop-color="#f9fdff"/>
+        <stop offset="100%" stop-color="#d8ecff"/>
       </linearGradient>
+      <radialGradient id="bellyShade" cx="70%" cy="70%" r="60%">
+        <stop offset="0%" stop-color="#b7d9ff" stop-opacity="0.35"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="fin" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#54adff"/>
+        <stop offset="100%" stop-color="#2c7adf"/>
+      </linearGradient>
+      <radialGradient id="finLight" cx="25%" cy="20%" r="80%">
+        <stop offset="0%" stop-color="#bde4ff" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f3a60" flood-opacity="0.18"/>
+      </filter>
     </defs>
-    <g>
-      <path d="M32 92 C42 56, 86 32, 150 38 C200 42, 240 62, 236 92 C230 128, 180 136, 128 130 C82 124, 22 126, 32 92 Z" fill="url(#whaleBody)"/>
-      <path d="M136 84 C168 86, 194 90, 218 104 C188 112, 150 114, 110 110 C92 108, 64 104, 46 96 C72 84, 106 82, 136 84 Z" fill="url(#belly)"/>
-      <path d="M178 106 Q190 118 210 118 Q190 104 182 94" fill="#3b8ce0"/>
-      <path d="M74 86 Q70 98 54 108 Q78 104 92 92" fill="#3b8ce0"/>
-      <path d="M32 82 Q20 72 16 58 Q28 62 40 62 Q34 48 38 34 Q50 50 64 58 Q48 62 40 76 Z" fill="#4aa3ff"/>
-      <circle cx="116" cy="80" r="18" fill="#fff"/>
-      <circle cx="118" cy="82" r="12" fill="#0f3a60"/>
-      <circle cx="123" cy="76" r="5" fill="#fff"/>
-      <circle cx="94" cy="96" r="6" fill="#ffb2c8" fill-opacity="0.8"/>
-      <circle cx="142" cy="96" r="6" fill="#ffb2c8" fill-opacity="0.8"/>
-      <path d="M112 108 Q118 114 126 108" stroke="#0f3a60" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M186 78 Q204 70 214 76" stroke="#0f3a60" stroke-width="4" fill="none" stroke-linecap="round"/>
-      <path d="M186 86 Q198 84 210 90" stroke="#0f3a60" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <g filter="url(#softShadow)">
+      <path d="M44 112 C48 60, 120 32, 190 44 C244 52, 292 88, 274 130 C256 170, 190 176, 130 166 C70 156, 42 148, 44 112 Z" fill="url(#whaleBody)"/>
+      <path d="M44 112 C48 60, 120 32, 190 44 C244 52, 292 88, 274 130 C256 170, 190 176, 130 166 C70 156, 42 148, 44 112 Z" fill="url(#bodyVolume)"/>
+      <path d="M142 112 C186 114, 226 128, 262 146 C216 154, 166 156, 118 150 C86 146, 62 136, 50 126 C86 106, 118 108, 142 112 Z" fill="url(#belly)"/>
+      <path d="M142 112 C186 114, 226 128, 262 146 C216 154, 166 156, 118 150 C86 146, 62 136, 50 126 C86 106, 118 108, 142 112 Z" fill="url(#bellyShade)"/>
+      <path d="M264 104 Q292 94 302 104 Q292 118 270 120" fill="url(#fin)"/>
+      <path d="M264 104 Q292 94 302 104 Q292 118 270 120" fill="url(#finLight)"/>
+      <path d="M88 110 Q74 136 42 152 Q80 146 104 120" fill="url(#fin)"/>
+      <path d="M88 110 Q74 136 42 152 Q80 146 104 120" fill="url(#finLight)"/>
+      <path d="M256 78 Q282 60 298 64 Q286 82 270 90" fill="#4aa3ff"/>
+      <path d="M256 90 Q284 82 302 92 Q282 104 262 108" fill="#4aa3ff"/>
+      <path d="M62 60 Q70 40 88 30 Q82 46 88 60 Q70 56 62 60 Z" fill="#7ed0ff" fill-opacity="0.9"/>
+      <path d="M82 70 Q90 50 108 40 Q100 56 108 72 Q92 66 82 70 Z" fill="#9ae0ff" fill-opacity="0.9"/>
+      <path d="M52 94 Q36 82 30 64 Q46 70 64 70 Q52 48 60 32 Q80 52 102 64 Q80 70 64 88 Z" fill="#5fb6ff"/>
+      <path d="M142 112 C186 114, 226 128, 262 146 C216 154, 166 156, 118 150 C86 146, 62 136, 50 126 C86 106, 118 108, 142 112 Z" stroke="#9fcdf8" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M122 118 L120 148" stroke="#9fcdf8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M138 120 L138 150" stroke="#9fcdf8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M156 124 L158 152" stroke="#9fcdf8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M174 128 L180 154" stroke="#9fcdf8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M112 92 L92 98 Q104 84 118 82" stroke="#2d84f5" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="124" cy="92" r="22" fill="#fff"/>
+      <circle cx="128" cy="94" r="14" fill="#0f2a50"/>
+      <circle cx="136" cy="86" r="6.5" fill="#fff"/>
+      <circle cx="100" cy="114" r="8" fill="#ffbfd4" fill-opacity="0.9"/>
+      <circle cx="148" cy="114" r="8" fill="#ffbfd4" fill-opacity="0.9"/>
+      <path d="M120 128 Q128 136 140 128" stroke="#0f2a50" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M196 92 Q214 84 230 92" stroke="#0f3a60" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M196 104 Q214 100 232 108" stroke="#0f3a60" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M210 40 Q214 24 224 20 Q220 32 224 46 Q214 40 210 40 Z" fill="#b6e6ff" fill-opacity="0.8"/>
+      <path d="M226 50 Q232 34 246 28 Q240 42 244 60 Q230 52 226 50 Z" fill="#d0f0ff" fill-opacity="0.8"/>
+      <circle cx="106" cy="70" r="4" fill="#e0f4ff"/>
+      <circle cx="116" cy="60" r="3.5" fill="#e0f4ff"/>
+      <circle cx="126" cy="64" r="3" fill="#e0f4ff"/>
+      <circle cx="136" cy="58" r="3.5" fill="#e0f4ff"/>
+      <circle cx="148" cy="62" r="3" fill="#e0f4ff"/>
     </g>
   </svg>
   <script>
